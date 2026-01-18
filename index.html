@@ -539,7 +539,7 @@
         .dock-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(30, 30, 30, 0.8); color: white; font-size: 1.2rem; transition: all 0.3s; }
         .dock-icon:hover { transform: scale(1.2) translateY(-8px); background: rgba(255, 255, 255, 0.2); box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); z-index: 10; color: white; }
 
-        /* --- RESPONSIVE (General) --- */
+        /* --- RESPONSIVE --- */
         @media(max-width: 991px) {
             h1 { font-size: 2.2rem !important; } h2 { font-size: 1.5rem !important; } body { font-size: 0.95rem !important; } 
             .hero p { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
@@ -555,60 +555,6 @@
             .footer-bottom { flex-direction: column; gap: 1.5rem; }
             .mac-dock { display: none; }
             .mobile-fab { bottom: 25px; right: 25px; }
-        }
-
-        /* --- RESPONSIVE (Small Card Optimization) --- */
-        @media(max-width: 600px) {
-            /* Specific compact styling for pricing cards */
-            #services .glass-card { 
-                padding: 1rem !important; /* Compact padding */
-            }
-            
-            .pkg-icon { 
-                width: 40px; height: 40px; font-size: 1rem; margin-bottom: 0.8rem; 
-            }
-            
-            .pkg-title { 
-                font-size: 1.1rem; margin-bottom: 0.2rem; 
-            }
-            
-            .pkg-desc { 
-                font-size: 0.75rem; margin-bottom: 0.8rem; min-height: auto; 
-            }
-            
-            .pkg-price { 
-                font-size: 1.8rem; margin-bottom: 0.2rem; 
-            }
-            
-            .pkg-period { 
-                font-size: 0.8rem; 
-            }
-
-            .pkg-features li { 
-                font-size: 0.8rem; margin-bottom: 0.4rem; padding-left: 20px; 
-            }
-
-            .setup-fee-tag { 
-                font-size: 0.7rem; padding: 2px; margin-bottom: 0.3rem; 
-            }
-
-            .bundle-tag { 
-                font-size: 0.6rem; padding: 3px 8px; top: 10px; right: 10px; 
-            }
-
-            .html-opt-btn { 
-                padding: 0.4rem; font-size: 0.75rem; 
-            }
-
-            /* Ensure single column stack */
-            #services > div {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .btn { 
-                font-size: 0.75rem !important; padding: 0.6rem 1rem !important; 
-            }
         }
     </style>
 </head>
@@ -2669,7 +2615,7 @@
             const termsCheck = document.getElementById('terms-check');
             
             if(!termsCheck.checked) {
-                showGlassModal("Agreement Required", "Please agree to Terms & Conditions to proceed with your order.", "warning", "I Agree", () => {
+                showGlassModal("Agreement Required", "Please agree to the Terms & Conditions to proceed with your order.", "warning", "I Agree", () => {
                     document.getElementById('terms-check').checked = true;
                 });
                 return;
